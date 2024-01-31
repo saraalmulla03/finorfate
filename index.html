@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scrolling with Bubbles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="audio-control">
+        <img src="images/soundon.png" id="muteBtn" alt="Sound Button" onclick="toggleMute()">
+    </div>
+    
+    <div class="horizontal-scroll">
+
+        <div class="slide" id="slide1" style="background-image: url('images/title.png');">
+            <!-- Bubbles for 1st slide will be appended here -->
+            <audio id="audio1" preload="auto" loop>
+                <source src="audio/underwater1.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="slide" id="slide2" style="background-image: url('images/oceanBG.png');">
+            <!-- Bubbles for 2nd slide will be appended here -->
+            <audio id="audio2" preload="auto" loop>
+                <source src="audio/underwater2.mp3" type="audio/mp3">
+            </audio>
+            
+            
+        </div>
+        <div class="slide" id="slide3" style="background-image: url('images/Slide 2 (net).png');">
+            <!-- Bubbles for 3rd slide will be appended here -->
+            <audio id="audio3" preload="auto" loop>
+                <source src="audio/underwater3.mp3" type="audio/mp3">
+            </audio>
+            <img src="images/Sad_(with_Body).png" alt="Fish" class="fish-animation" id="fish3">
+            <img src="images/Happy_(with_Body).png" alt="Fish" class="fish-animation" id="fish2">
+            <img src="images/seaGrass.png" alt="Grass" class="grass" id="grass">
+
+            <img src="images/net.png" alt="Net" class="net-animation" id="net2">
+        </div>
+        <div class="slide" id="slide4" style="background-image: url('images/Slide_3_(Carnival)--_Neutral.png');">
+            <audio id="audio4" preload="auto" loop>
+                <source src="audio/carnival.mp3" type="audio/mp3">
+            </audio>
+            <img src="images/balloons.png" alt="Balloons" class="balloons-animation" id="balloons4">
+
+        </div>
+        <div class="slide" id="slide5" style="background-image: url('images/Slide_4_(Choice)--_Neutral.png');">
+            <div class="button left-button"></div>
+            <div class="button right-button"></div>
+            <audio id="audio5" preload="auto" loop>
+                <source src="audio/carnival.mp3" type="audio/mp3">
+            </audio>
+            <img src="images/Neutral_(with_Body).png" alt="Fish" class="floating-fish" id="neutral"/>
+        </div>
+        <div class="slide conditional" id="slide6" style="background-image: url('images/Slide_5_(bedroom)--_Sad_Face.png');">
+            <audio id="audio6" preload="auto" loop>
+                <source src="audio/sad.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="slide conditional" id="slide7" style="background-image: url('images/Slide_6_(Death)--_Dead_Face.png');">
+            <audio id="audio7" preload="auto" loop>
+                <source src="audio/sad.mp3" type="audio/mp3">
+            </audio>
+            <img src="images/Dead_(with_Body).png" alt="Fish" class="floating-fish" id="dead"/>
+        </div>
+        <div class="slide conditional" id="slide8" style="background-image: url('images/Slide 7 (Toilet)-- Dead Face.png');">
+            <audio id="audio8" preload="auto" loop>
+                <source src="audio/toilet-flushing.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="slide conditional" id="slide9" style="background-image: url('images/Slide_8_(in_aquarium)--_Happy_Face.png');">
+            <audio id="audio9" preload="auto" loop>
+                <source src="audio/happy.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="slide conditional" id="slide10" style="background-image: url('images/Slide 9 (finding a partner)-- Happy Face.png');">
+            <audio id="audio10" preload="auto" loop>
+                <source src="audio/happy.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="slide conditional" id="slide11" style="background-image: url('images/Slide_10_family.png');">
+            <audio id="audio11" preload="auto" loop>
+                <source src="audio/rickroll.mp3" type="audio/mp3">
+            </audio>
+            <img src="images/Happy_(with_Body).png" alt="Fish" class="floating-fish" id="happy"/>
+            <img src="images/female.png" alt="Fish" class="floating-fish" id="fem"/>
+            <img src="images/baby fish.png" alt="Fish" class="floating-fish" id="baby"/>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

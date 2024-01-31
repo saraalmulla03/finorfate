@@ -1,0 +1,179 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.horizontal-scroll {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.turn {
+    transform: translateX(-100%);
+    transition: transform 1s ease-out;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 5px solid black;
+    background-color: black;
+    position: relative; /* Added this to ensure bubbles are contained within the slide */
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+.bubble {
+    position: absolute;
+    bottom: 0;
+    animation: rise 10s linear infinite;
+    will-change: transform;
+    opacity: 0.7;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+.button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    transition: background-color 0.3s;
+}
+
+.left-button {
+    left: 0;
+}
+
+.right-button {
+    right: 0;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.conditional {
+    display: none;
+} 
+
+
+
+.audio-control {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    padding: 0;
+    margin: 0;
+}
+
+.fish-animation {
+    width: 15%; /* adjust this based on your fish image size */
+    position: absolute;
+    bottom: 40%; /* adjust starting vertical position */
+    opacity:1;
+    /* left: 5%;  initial starting horizontal position */
+    /* z-index: 2; This will place the fish above the slides */
+}
+
+.net-animation {
+    width: 35%; /* adjust based on your net image size */
+    position: absolute;
+    top: -20%; /* start position above the slide */
+    left: 65%; /* adjust starting horizontal position */
+    transform: rotate(-45deg); /* initial rotation */
+    transition: transform 1s ease-in-out; /* smooth transition for net movement */
+}
+
+.balloons-animation {
+    width: 60%; /* adjust based on your balloons image size */
+    position: absolute;
+    bottom: -700px; /* start below the slide */
+    left: -500px; /* start from the left corner */
+    transition: transform 10s ease-out; /* adjust the transition time as needed */
+    transform: translateY(0); /* no initial vertical translation */
+}
+
+.audio-control img {
+    width: auto; /* You can adjust this as per your requirement */
+    height: 30px; /* You can adjust this as per your requirement */
+    margin: 0;
+    padding: 0;
+}
+
+.floating-fish {
+    width: 15%; /* adjust this based on your fish image size */
+    position: absolute;
+    opacity:1;
+    animation: float 3s ease-in-out infinite;
+}
+
+#dead{
+    width: 25%;
+    bottom: 30%; /* adjust starting vertical position */
+    left: 46%;
+}
+
+#neutral{
+    bottom: 20%; /* adjust starting vertical position */
+    left: 42.5%;
+}
+
+#happy{
+    width:30vh;
+    bottom: 40%; /* adjust starting vertical position */
+    left: 30%;
+}
+
+#fem{
+    transform: scaleX(-1);
+    width: 100vh;
+    bottom: 30%; /* adjust starting vertical position */
+    left: 15%;
+}
+
+#baby{
+    width:70vh;
+    bottom: 28%; /* adjust starting vertical position */
+    left: 30%;
+}
+
+.grass {
+    position: absolute;
+    right: 100vw;
+    bottom:6vh
+    
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);  /* Adjust this value for greater/lesser float */
+    }
+}
+
+#fish2 {
+    opacity: 1;
+}
